@@ -1,0 +1,736 @@
+{
+    "rules": [
+        {
+            "name": "below_21sma_cross",
+            "description": "Buy when the price is above the last {previous_days} and current price crosses below the 21-period simple moving average (SMA) but is above the 50-period, 200-period SMA",
+            "type": "buy",
+            "priority": 1,
+            "period": "D",
+            "length": 21,
+            "interval": "365d",
+            "previous_days": 20,
+            "stocks": {
+                "AAPL": {
+                    "enabled": true,
+                    "buy_ticker": "AAPL",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.02
+                },
+                "MSFT": {
+                    "enabled": true,
+                    "buy_ticker": "MSFT",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.02
+                },
+                "GOOGL": {
+                    "enabled": true,
+                    "buy_ticker": "GOOGL",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.02
+                },
+                "NVDA": {
+                    "enabled": true,
+                    "buy_ticker": "NVDA",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.05
+                },
+                "AMZN": {
+                    "enabled": true,
+                    "buy_ticker": "AMZN",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.03
+                },
+                "SMH": {
+                    "enabled": true,
+                    "buy_ticker": "SMH",
+                    "purchase_limit_pct": 1.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "XLF": {
+                    "enabled": true,
+                    "buy_ticker": "XLF",
+                    "purchase_limit_pct": 1.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "VGT",
+                    "purchase_limit_pct": 1.5,
+                    "pct_below_previous_buy": 0.02  
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "VOO",
+                    "purchase_limit_pct": 1.5,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        },
+        {
+            "name": "below_50sma_cross",
+            "description": "Buy when the price is above the last {previous_days} and current price crosses below the 50-period simple moving average (SMA) but is above the 200-period SMA",
+            "type": "buy",
+            "priority": 2,
+            "period": "D",
+            "length": 50,
+            "interval": "365d",
+            "previous_days": 20,
+            "stocks": {
+                "AAPL": {
+                    "enabled": true,
+                    "buy_ticker": "AAPL",
+                    "purchase_limit_pct": 1.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "MSFT": {
+                    "enabled": true,
+                    "buy_ticker": "MSFT",
+                    "purchase_limit_pct": 1.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "GOOGL": {
+                    "enabled": true,
+                    "buy_ticker": "GOOGL",
+                    "purchase_limit_pct": 1.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "NVDA": {
+                    "enabled": true,
+                    "buy_ticker": "NVDA",
+                    "purchase_limit_pct": 1.5,
+                    "pct_below_previous_buy": 0.05
+                },
+                "AMZN": {
+                    "enabled": true,
+                    "buy_ticker": "AMZN",
+                    "purchase_limit_pct": 1.5,
+                    "pct_below_previous_buy": 0.03
+                },
+                "SMH": {
+                    "enabled": true,
+                    "buy_ticker": "SMH",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "XLF": {
+                    "enabled": true,
+                    "buy_ticker": "XLF",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "VGT",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "VOO",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        },
+        {
+            "name": "below_200sma_cross",
+            "description": "Buy when the price is above the last {previous_days} and current price crosses below the 200-period simple moving average (SMA)",
+            "type": "buy",
+            "priority": 5,
+            "period": "D",
+            "length": 200,
+            "interval": "365d",
+            "previous_days": 20,
+            "stocks": {
+                "AAPL": {
+                    "enabled": true,
+                    "buy_ticker": "AAPL",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "MSFT": {
+                    "enabled": true,
+                    "buy_ticker": "MSFT",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "GOOGL": {
+                    "enabled": true,
+                    "buy_ticker": "GOOGL",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "NVDA": {
+                    "enabled": true,
+                    "buy_ticker": "NVDA",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.05
+                },
+                "AMZN": {
+                    "enabled": true,
+                    "buy_ticker": "AMZN",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.03
+                },
+                "SMH": {
+                    "enabled": true,
+                    "buy_ticker": "SMH",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "XLF": {
+                    "enabled": true,
+                    "buy_ticker": "XLF",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "VGT",
+                    "purchase_limit_pct": 3.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "VOO",
+                    "purchase_limit_pct": 5,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        },
+        {
+            "name": "below_21sma_cross",
+            "description": "Buy when the price is above the last {previous_days} and current price crosses below the 21-period weekly simple moving average (SMA) but is above the 50-period, 200-period weekly SMA",
+            "type": "buy",
+            "priority": 4,
+            "period": "W",
+            "length": 21,
+            "interval": "5y",
+            "previous_days": 15,
+            "stocks": {
+                "AAPL": {
+                    "enabled": true,
+                    "buy_ticker": "AAPL",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "MSFT": {
+                    "enabled": true,
+                    "buy_ticker": "MSFT",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "GOOGL": {
+                    "enabled": true,
+                    "buy_ticker": "GOOGL",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "NVDA": {
+                    "enabled": true,
+                    "buy_ticker": "NVDA",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.05
+                },
+                "AMZN": {
+                    "enabled": true,
+                    "buy_ticker": "AMZN",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.03
+                },
+                "SMH": {
+                    "enabled": true,
+                    "buy_ticker": "SMH",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "XLF": {
+                    "enabled": true,
+                    "buy_ticker": "XLF",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "VGT",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "VOO",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        },
+        {
+            "name": "below_50sma_cross",
+            "description": "Buy when the price is above the last {previous_days} and current price crosses below the 50-period weekly simple moving average (SMA) but is above the 200-period weekly SMA",
+            "type": "buy",
+            "priority": 6,
+            "period": "W",
+            "length": 50,
+            "interval": "5y",
+            "previous_days": 15,
+            "stocks": {
+                "AAPL": {
+                    "enabled": true,
+                    "buy_ticker": "AAPL",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "MSFT": {
+                    "enabled": true,
+                    "buy_ticker": "MSFT",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "GOOGL": {
+                    "enabled": true,
+                    "buy_ticker": "GOOGL",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "NVDA": {
+                    "enabled": true,
+                    "buy_ticker": "NVDA",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.05
+                },
+                "AMZN": {
+                    "enabled": true,
+                    "buy_ticker": "AMZN",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.03
+                },
+                "SMH": {
+                    "enabled": true,
+                    "buy_ticker": "SMH",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.02
+                },
+                "XLF": {
+                    "enabled": true,
+                    "buy_ticker": "XLF",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.02
+                },
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "VGT",
+                    "purchase_limit_pct": 3.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "VOO",
+                    "purchase_limit_pct": 5,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        },
+        {
+            "name": "below_200sma_cross",
+            "description": "Buy when the price is above the last {previous_days} and current price crosses below the 200-period weekly simple moving average (SMA)",
+            "type": "buy",
+            "priority": 7,
+            "period": "W",
+            "length": 200,
+            "interval": "5y",
+            "previous_days": 15,
+            "stocks": {
+                "AAPL": {
+                    "enabled": true,
+                    "buy_ticker": "AAPL",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.02
+                },
+                "MSFT": {
+                    "enabled": true,
+                    "buy_ticker": "MSFT",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.02
+                },
+                "GOOGL": {
+                    "enabled": true,
+                    "buy_ticker": "GOOGL",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.02
+                },
+                "NVDA": {
+                    "enabled": true,
+                    "buy_ticker": "NVDA",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.05
+                },
+                "AMZN": {
+                    "enabled": true,
+                    "buy_ticker": "AMZN",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.03
+                },
+                "SMH": {
+                    "enabled": true,
+                    "buy_ticker": "SMH",
+                    "purchase_limit_pct": 3.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "XLF": {
+                    "enabled": true,
+                    "buy_ticker": "XLF",
+                    "purchase_limit_pct": 4,
+                    "pct_below_previous_buy": 0.02
+                },
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "VGT",
+                    "purchase_limit_pct": 4.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "VOO",
+                    "purchase_limit_pct": 6,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        },
+        {
+            "name": "below_10ema_cross",
+            "description": "Buy when the price is above the last {previous_days} and current price crosses below the ema-period weekly exponential moving average (EMA) but is above the 20-period, 40-period, 200-period weekly EMA",
+            "type": "buy",
+            "priority": 3,
+            "period": "W",
+            "length": 10,
+            "interval": "5y",
+            "previous_days": 10,
+            "stocks": {
+                "AAPL": {
+                    "enabled": true,
+                    "buy_ticker": "AAPL",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.02
+                },
+                "MSFT": {
+                    "enabled": true,
+                    "buy_ticker": "MSFT",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.02           
+                },
+                "GOOGL": {
+                    "enabled": true,
+                    "buy_ticker": "GOOGL",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.02
+                },
+                "NVDA": {
+                    "enabled": true,
+                    "buy_ticker": "NVDA",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.05
+                },
+                "AMZN": {
+                    "enabled": true,
+                    "buy_ticker": "AMZN",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.03
+                },
+                "SMH": {
+                    "enabled": true,
+                    "buy_ticker": "SMH",
+                    "purchase_limit_pct": 1.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "XLF": {
+                    "enabled": true,
+                    "buy_ticker": "XLF",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "VGT",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "VOO",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        },
+        {
+            "name": "below_40sma_cross",
+            "description": "Buy when the price is above the last {previous_days} and current price crosses below the ema-period weekly exponential moving average (EMA) but is above the 200-period weekly EMA",
+            "type": "buy",
+            "priority": 8,
+            "period": "M",
+            "length": 40,
+            "interval": "10y",
+            "previous_days": 10,
+            "stocks": {
+                "AAPL": {
+                    "enabled": true,
+                    "buy_ticker": "AAPL",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.02
+                },
+                "MSFT": {
+                    "enabled": true,
+                    "buy_ticker": "MSFT",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.02  
+                },
+                "GOOGL": {
+                    "enabled": true,
+                    "buy_ticker": "GOOGL",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "NVDA": {
+                    "enabled": true,
+                    "buy_ticker": "NVDA",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.05  
+                },
+                "AMZN": {
+                    "enabled": true,
+                    "buy_ticker": "AMZN",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.03
+                },
+                "SMH": {
+                    "enabled": true,
+                    "buy_ticker": "SMH",
+                    "purchase_limit_pct": 3.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "XLF": {
+                    "enabled": true,
+                    "buy_ticker": "XLF",
+                    "purchase_limit_pct": 3.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "VGT",
+                    "purchase_limit_pct": 5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "VOO",
+                    "purchase_limit_pct": 7.5,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        },
+        {
+            "name": "below_daily_atr",
+            "description": "Buy when the price is above the last {previous_days} and current price crosses below the ATR Trailing Stop limit using atr period as 5, atr factor as 2.5 average type as wilders",
+            "type": "buy",
+            "priority": 5,
+            "period": "D",
+            "length": 5,
+            "interval": "365d",
+            "previous_days": 20,
+            "stocks": {
+                "AAPL": {
+                    "enabled": true,
+                    "buy_ticker": "AAPL",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.02
+                },
+                "MSFT": {
+                    "enabled": true,
+                    "buy_ticker": "MSFT",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.02  
+                },
+                "GOOGL": {
+                    "enabled": true,
+                    "buy_ticker": "GOOGL",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.02
+                },
+                "NVDA": {
+                    "enabled": true,
+                    "buy_ticker": "NVDA",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.05  
+                },
+                "AMZN": {
+                    "enabled": true,
+                    "buy_ticker": "AMZN",
+                    "purchase_limit_pct": 1,
+                    "pct_below_previous_buy": 0.03
+                },
+                "SMH": {
+                    "enabled": true,
+                    "buy_ticker": "SMH",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "XLF": {
+                    "enabled": true,
+                    "buy_ticker": "XLF",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "VGT",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "VOO",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        },
+        {
+            "name": "below_weekly_atr",
+            "description": "Buy when the price is above the last {previous_days} and current price crosses below the ATR Trailing Stop limit using atr period as 5, atr factor as 2.5 average type as wilders",
+            "type": "buy",
+            "priority": 6,
+            "period": "W",
+            "length": 5,
+            "interval": "5y",
+            "previous_days": 15,
+            "stocks": {
+                "AAPL": {
+                    "enabled": true,
+                    "buy_ticker": "AAPL",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "MSFT": {
+                    "enabled": true,
+                    "buy_ticker": "MSFT",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02  
+                },
+                "GOOGL": {
+                    "enabled": true,
+                    "buy_ticker": "GOOGL",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.02
+                },
+                "NVDA": {
+                    "enabled": true,
+                    "buy_ticker": "NVDA",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.05  
+                },
+                "AMZN": {
+                    "enabled": true,
+                    "buy_ticker": "AMZN",
+                    "purchase_limit_pct": 2,
+                    "pct_below_previous_buy": 0.03
+                },
+                "SMH": {
+                    "enabled": true,
+                    "buy_ticker": "SMH",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.02
+                },
+                "XLF": {
+                    "enabled": true,
+                    "buy_ticker": "XLF",
+                    "purchase_limit_pct": 3,
+                    "pct_below_previous_buy": 0.02
+                },
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "VGT",
+                    "purchase_limit_pct": 3.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "VOO",
+                    "purchase_limit_pct": 4.5,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        },
+        {
+            "name": "nymo_below_50",
+            "description": "Buy when previous day's NYMO close is below -50",
+            "type": "buy",
+            "priority": 6,
+            "period": "D",
+            "length": 1,
+            "interval": "1d",
+            "nymo_threshold": -50,
+            "stocks": {
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "QQQ",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.02
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "SPY",
+                    "purchase_limit_pct": 2.5,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        },
+        {
+            "name": "nymo_below_70",
+            "description": "Buy when previous day's NYMO close is below -70",
+            "type": "buy",
+            "priority": 9,
+            "period": "D",
+            "length": 1,
+            "interval": "1d",
+            "nymo_threshold": -70,
+            "stocks": {
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "QQQ",
+                    "purchase_limit_pct": 10,
+                    "pct_below_previous_buy": 0.02
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "SPY",
+                    "purchase_limit_pct": 10,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        },
+        {
+            "name": "nymo_below_100",
+            "description": "Buy when previous day's NYMO close is below -100",
+            "type": "buy",
+            "priority": 10,
+            "period": "D",
+            "length": 1,
+            "interval": "1d",
+            "nymo_threshold": -100,
+            "stocks": {
+                "QQQ": {
+                    "enabled": true,
+                    "buy_ticker": "QQQ",
+                    "purchase_limit_pct": 50,
+                    "pct_below_previous_buy": 0.02
+                },
+                "SPY": {
+                    "enabled": true,
+                    "buy_ticker": "SPY",
+                    "purchase_limit_pct": 30,
+                    "pct_below_previous_buy": 0.02
+                }
+            }
+        }
+    ]    
+}
